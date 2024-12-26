@@ -2,14 +2,13 @@
   "version": 2,
   "builds": [
     {
-      "src": "start.sh",
-      "use": "@vercel/static-build",
+      "src": "**/*",
+      "use": "@vercel/vercel-bash",
       "config": {
-        "distDir": "public"
+        "commands": [
+          "bash start.py"
+        ]
       }
     }
-  ],
-  "scripts": {
-    "build": "bash start.sh"
-  }
+  ]
 }
